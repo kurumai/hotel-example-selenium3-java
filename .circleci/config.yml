@@ -1,0 +1,13 @@
+version: 2.1
+
+orbs:
+  gradle: circleci/gradle@2.1.0
+
+workflows:
+  test-with-custom-reports:
+    jobs:
+      - gradle/test:
+          store_artifacts: build/reports/
+          test_command: cleanTest test
+          test_results_path: build/test-results/
+          
