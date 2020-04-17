@@ -7,7 +7,6 @@ workflows:
   test-with-custom-reports:
     jobs:
       - gradle/test:
-          store_artifacts: build/reports/
           test_command: cleanTest test
           test_results_path: build/test-results/
           
